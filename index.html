@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat box</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- full body -->
+    <div class="app">
+      <!-- screen for joining chat -->
+      <div class="screen join-screen active">
+        <!-- whole form div -->
+        <div class="form">
+          <h2>Join ChatRoom</h2>
+          <!-- username and input form -->
+          <div class="form-input">
+            <label>Username</label>
+            <input type="text" id="username" />
+          </div>
+          <!-- join button -->
+          <div class="form-input">
+            <button id="join-user">Join</button>
+          </div>
+        </div>
+      </div>
+      <!-- screen to chat -->
+      <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">
+            <div class="logo-name">
+              <div>
+                <img
+                  class="logo-img"
+                  src="./Assest/logo.png"
+                  height="50px"
+                  width="50px"
+                />
+              </div>
+              <div class="app-name">
+                ChatOoOgram
+                <div id="feedback"></div>
+              </div>
+            </div>
+          </div>
+          <button id="exit-chat">Exit</button>
+        </div>
+        <div class="messages msg-bg">
+          <!-- <div class="message my-message" id="my-message">
+                    <div>
+                        <div class="name">you</div>
+                        <div class="text">hi</div>
+                        <div class="time">1.1.1</div>
+                    </div>
+                </div> -->
+          <!-- <div class="update">
+                </div> -->
+          <!-- <div id="feedback">
+                </div> -->
+          <!-- <div class="message other-message">
+                    <div>
+                        <div class="name">indar</div>
+                        <div class="text">lol</div>
+                        <div class="time">2.2.2</div>
+                    </div>
+                </div> -->
+        </div>
+        <div class="typebox">
+          <input type="text" id="message-input" />
+          <button id="send-message">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
